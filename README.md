@@ -17,6 +17,20 @@ Developed and tested on macOS using Python 3.13.9 (Anaconda) and scikit-learn 1.
 
 ---
 
+## Dataset
+
+The dataset is sourced from Kaggle:
+
+Rabie El Kharoua (2024). Predict Conversion in Digital Marketing Dataset.
+
+If the dataset file is missing, download it from:
+https://www.kaggle.com/datasets/rabieelkharoua/predict-conversion-in-digital-marketing-dataset
+
+If the data/ folder does not exist, create it in the project root directory and place the CSV file inside it as:
+data/digital_marketing_campaign_dataset.csv
+
+---
+
 ## Setup Instructions
 
 1. Clone the repository:
