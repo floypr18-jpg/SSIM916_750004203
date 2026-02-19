@@ -2,8 +2,8 @@
 
 # Problem Set 1 – Predicting Conversions in Performance Marketing Using Classification Models
 
-This project predicts customer conversion using a digital marketing campaign dataset.
-Two models are compared: Logistic Regression and Random Forest.
+This project predicts customer conversion using a digital marketing campaign dataset.  
+Two models are compared: **Logistic Regression** and **Random Forest**.
 
 Developed and tested on macOS using Python 3.13.9 (Anaconda) and scikit-learn 1.7.2.
 
@@ -11,9 +11,9 @@ Developed and tested on macOS using Python 3.13.9 (Anaconda) and scikit-learn 1.
 
 ## Repository Structure
 
-- analysis.ipynb — Main notebook containing full analysis pipeline
-- data/digital_marketing_campaign_dataset.csv — Dataset
-- requirements.txt — Required Python packages
+- `analysis.ipynb` — Main notebook containing full analysis pipeline  
+- `data/digital_marketing_campaign_dataset.csv` — Dataset  
+- `requirements.txt` — Required Python packages  
 
 ---
 
@@ -21,38 +21,60 @@ Developed and tested on macOS using Python 3.13.9 (Anaconda) and scikit-learn 1.
 
 The dataset is sourced from Kaggle:
 
-Rabie El Kharoua (2024). Predict Conversion in Digital Marketing Dataset.
+Rabie El Kharoua (2024). *Predict Conversion in Digital Marketing Dataset.*
 
-If the dataset file is missing, download it from:
+Kaggle link:  
 https://www.kaggle.com/datasets/rabieelkharoua/predict-conversion-in-digital-marketing-dataset
 
-If the data/ folder does not exist, create it in the project root directory and place the CSV file inside it as:
+The dataset contains **8,000 observations** with a binary target variable `Conversion`.
+
+If the dataset file is missing:
+
+1. Download it from Kaggle.
+2. If the `data/` folder does not exist, create it in the project root directory.
+3. Place the CSV file inside it as:
+
+```
 data/digital_marketing_campaign_dataset.csv
+```
 
 ---
 
 ## Setup Instructions
 
-1. Clone the repository:
+### 1. Clone the repository
 
-   git clone <your-repo-link>
-   cd SSIM916_750004203
+```bash
+git clone https://github.com/yourusername/SSIM916_750004203.git
+cd SSIM916_750004203
+```
 
-2. (Optional but recommended) Create a virtual environment:
+### 2. (Optional but recommended) Create a virtual environment
 
-   python -m venv venv
-   source venv/bin/activate  (Mac/Linux)
-   venv\Scripts\activate     (Windows)
+```bash
+python -m venv venv
+source venv/bin/activate  # Mac/Linux
+```
 
-3. Install dependencies:
+For Windows:
 
-   pip install -r requirements.txt
+```bash
+venv\Scripts\activate
+```
 
-4. Open Jupyter Notebook:
+### 3. Install dependencies
 
-   jupyter notebook
+```bash
+pip install -r requirements.txt
+```
 
-5. Run analysis.ipynb from top to bottom.
+### 4. Open Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+### 5. Run `analysis.ipynb` from top to bottom.
 
 ---
 
@@ -60,15 +82,19 @@ data/digital_marketing_campaign_dataset.csv
 
 The notebook produces:
 
-- Class distribution plot
-- Logistic Regression metrics (ROC-AUC, Precision, Recall, F1, Confusion Matrix)
-- Random Forest metrics (ROC-AUC, Precision, Recall, F1, Confusion Matrix)
-- ROC curve comparison plot
-- Top 10 Random Forest feature importance plot
+- Class distribution plot  
+- Logistic Regression metrics (ROC-AUC, Precision, Recall, F1, Confusion Matrix)  
+- Random Forest metrics (ROC-AUC, Precision, Recall, F1, Confusion Matrix)  
+- ROC curve comparison plot  
+- Top 10 Random Forest feature importance plot  
+
+All results are reproducible by running the notebook sequentially.
 
 ---
 
 ## Notes
 
-- Random seed is fixed at 42 for reproducibility.
-- All package versions are pinned in requirements.txt to ensure reproducibility.
+- The train–test split uses stratification with `random_state=42`.
+- Random Forest uses `n_estimators=600` and `class_weight="balanced_subsample"`.
+- Logistic Regression uses `class_weight="balanced"`.
+- All package versions are pinned in `requirements.txt` to ensure reproducibility.
