@@ -5,6 +5,8 @@
 This project predicts customer conversion using a digital marketing campaign dataset.
 Models compared: Logistic Regression and Random Forest.
 
+Developed using Python 3.13.9
+
 ## Files
 - analysis.ipynb: main notebook
 - data/digital_marketing_campaign_dataset.csv: dataset
