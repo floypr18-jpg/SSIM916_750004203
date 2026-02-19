@@ -45,7 +45,7 @@ data/digital_marketing_campaign_dataset.csv
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/SSIM916_750004203.git
+git clone https://github.com/floypr18-jpg/SSIM916_750004203.git
 cd SSIM916_750004203
 ```
 
