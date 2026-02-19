@@ -5,7 +5,7 @@
 This project predicts customer conversion using a digital marketing campaign dataset.
 Two models are compared: Logistic Regression and Random Forest.
 
-Developed using Python 3.13.9
+Developed and tested on macOS using Python 3.13.9 (Anaconda) and scikit-learn 1.7.2.
 
 ---
 
@@ -57,4 +57,4 @@ The notebook produces:
 ## Notes
 
 - Random seed is fixed at 42 for reproducibility.
-- Results may vary slightly depending on scikit-learn version.
+- All package versions are pinned in requirements.txt to ensure reproducibility.
